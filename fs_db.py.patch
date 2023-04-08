@@ -1,0 +1,77 @@
+*** fs_db.py	2023-04-04 11:44:41.000000000 -0700
+--- ../FamilySearch-working/fs_db.py	2023-04-03 13:16:34.000000000 -0700
+***************
+*** 42,58 ****
+  _ = _trans.gettext
+  
+  stato_tags = (
+! ('FS_Identa', 'green'),
+! ('FS_Konf', 'green'),
+! ('FS_Esenco', 'red'),
+! ('FS_Nomo', 'red'),
+! ('FS_Gepatro', 'red'),
+! ('FS_Familio', 'red'),
+! ('FS_Fakto', 'red'),
+! ('FS_Dup', 'red'),
+! ('FS_Dok', 'red'),
+! ('FS_Gramps', 'yellow'),
+! ('FS_FS', 'yellow'),
+  )
+  
+  def create_schema(db):
+--- 42,58 ----
+  _ = _trans.gettext
+  
+  stato_tags = (
+! ('FS_Identa', 'green', 'FS-Identical'),
+! ('FS_Konf', 'green', 'FS_Konf'),
+! ('FS_Esenco', 'red', 'FS_Esenco'),
+! ('FS_Nomo', 'red', 'FS-Name'),
+! ('FS_Gepatro', 'red', 'FS-Parent'),
+! ('FS_Familio', 'red', 'FS-Family'),
+! ('FS_Fakto', 'red', 'FS-Fact'),
+! ('FS_Dup', 'red', 'FS-Duplicate'),
+! ('FS_Dok', 'red', 'FS-Document'),
+! ('FS_Gramps', 'yellow', 'FS-Gramps'),
+! ('FS_FS', 'yellow', 'FS-FamilySearch'),
+  )
+  
+  def create_schema(db):
+***************
+*** 79,87 ****
+    for t in stato_tags:
+      if not db.get_tag_from_name(t[0]):
+        if txn == None :
+!         txn = DbTxn(_("FamilySearch : krei datumbazan tabelon"), db) 
+        tag = Tag()
+!       tag.set_name(t[0])
+        tag.set_color(t[1])
+        db.add_tag(tag, txn)
+        db.commit_tag(tag, txn)
+--- 79,87 ----
+    for t in stato_tags:
+      if not db.get_tag_from_name(t[0]):
+        if txn == None :
+!         txn = DbTxn(_("FamilySearch : create database table"), db) 
+        tag = Tag()
+!       tag.set_name(t[2])
+        tag.set_color(t[1])
+        db.add_tag(tag, txn)
+        db.commit_tag(tag, txn)
+***************
+*** 104,110 ****
+  
+    def commit(self,txn):
+      if not self.p_handle:
+!       print("eraro : ne p_handle !")
+        return
+      self.db.dbapi.execute("SELECT 1 FROM personfs_stato where p_handle=?",[self.p_handle])
+      row = self.db.dbapi.fetchone()
+--- 104,110 ----
+  
+    def commit(self,txn):
+      if not self.p_handle:
+!       print("error : no p_handle !")
+        return
+      self.db.dbapi.execute("SELECT 1 FROM personfs_stato where p_handle=?",[self.p_handle])
+      row = self.db.dbapi.fetchone()
