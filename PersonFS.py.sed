@@ -18,4 +18,6 @@ s/'Dato'/'Date'/
 s/'Gramps Valoro'/'Gramps Value'/
 s/'FS Dato'/'FamilySearch Date'/
 s/'FS Valoro'/'FamilySearch Value'/
-
+s/'gedcomx ne trovita aŭ/'gedcomx not found or/
+s/"kopii_al_gramps"/"copy_to_gramps"/
+s/"nb résultats = "/"nb results = "/
