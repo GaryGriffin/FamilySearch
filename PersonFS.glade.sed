@@ -7,7 +7,7 @@ s/>Antaŭnomo :</>First Name :</
 s/>Sekso :</>Gender :</
 s/>Birdo :</>Birth :</
 s/>Loko :</>Location :</
-s/>Lanĉi</>Launch</
+s/>Lanĉi</>Refresh</
 s/>Aldoni mian personon al FamilySearch</>Add person to FamilySearch</
 s/>Gramps Individuo\/FamilySearch Individuo</>Gramps Individual\/FamilySearch Individual</
 s/>Serĉi</>Search</
