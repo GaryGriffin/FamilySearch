@@ -25,4 +25,5 @@ s/>Statuso de eventoj</>Status of events</
 s/>Alklakante la Apliki-Butonon, mi konsentas/>By clicking the Apply Button, I agree/
 s/PersonFS ŝatus scii viajn bazajn FamilySearch-profilinformojn kaj alirdatenojn pri viaj prapatroj de la FamilySearch genealogia arbo./PersonFS would like to know your basic FamilySearch profile information and access data about your ancestors from the FamilySearch family tree./
 s/PersonFS uzos ĉi tiujn informojn konforme al iliaj respektivaj servokondiĉoj kaj privatecaj politikoj./PersonFS will use this information in accordance with their respective terms of service and privacy policies./
-
+s/>Importas edzoj, gepatroj kaj infanoj kun unu kliko</>Import husbands, parents and children with one click</
+s/>Klaku min por kopii FSFTID al tondujo</>Click to copy FSFTID to clipboard</
