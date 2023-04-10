@@ -23,3 +23,4 @@ s/'Faktoj'/'Fact'/
 s/'Familioj'/'Families'/
 s/'Aliaj nomoj'/'Other names'/
 s/'Gepatroj'/'Parents'/
+s/'Esenco'/'Essential'/
