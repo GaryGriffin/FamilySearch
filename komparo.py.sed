@@ -19,3 +19,7 @@ s/"liste triée : "/"Process List : "/
 s/"traitement "/"processing "/
 s/'FS ID %s ne trovita'/'FS ID %s not found'/
 s/db.get_tag_from_name(t\[0\])/db.get_tag_from_name(t\[2\])/
+s/'Faktoj'/'Fact'/
+s/'Familioj'/'Families'/
+s/'Aliaj nomoj'/'Other names'/
+s/'Gepatroj'/'Parents'/
