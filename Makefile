@@ -10,14 +10,14 @@ esperanto:
 	-cp komparo.py.es.SAVE komparo.py
 	-cp PersonFS.py.es.SAVE PersonFS.py
 
-%.en: %.es
+%.en: %.es %.sed
 	sed -f $*.sed < $< > $@
 	cp $< $<.SAVE
 
 %.es: %
 	cp $< $@
 
-fs_db.py.en:	fs_db.py.es
+fs_db.py.en:	fs_db.py.es fs_db.py.patch
 	patch -c -o fs_db.py.en fs_db.py.es fs_db.py.patch
 	cp $< $<.SAVE
 
